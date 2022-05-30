@@ -4,10 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_add_student.xml" value="0.22" />
-        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_delete_student.xml" value="0.21" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_delete_student.xml" value="0.22" />
         <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_search_student.xml" value="0.20416666666666666" />
         <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_update_student.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/listview_item.xml" value="0.25" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_view_all_students.xml" value="0.1" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_view_students_by_age.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/activity_view_students_by_class.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android Projects/SQLite_DB_1/app/src/main/res/layout/listview_item.xml" value="0.2" />
       </map>
     </option>
   </component>

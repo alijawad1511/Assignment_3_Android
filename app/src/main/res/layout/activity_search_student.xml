@@ -3,12 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".SearchStudent"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    tools:context=".DeleteStudent">
-
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/etSearch"
@@ -16,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:hint="Search Student ID"
-        android:inputType="number" />
+        android:inputType="number"
+        android:minHeight="48dp" />
 
 
     <RelativeLayout
@@ -46,7 +46,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,8 +61,8 @@
                 android:layout_weight="0.3"
                 android:scaleType="fitCenter"
                 android:layout_marginRight="10dp"
-                android:padding="10dp"
                 android:visibility="invisible"
+                android:padding="10dp"
                 android:src="@drawable/user_profile"/>
 
             <LinearLayout
@@ -79,8 +80,8 @@
                     android:layout_weight="0.3"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center_vertical"
-                    android:visibility="invisible">
+                    android:visibility="invisible"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/textView2"
@@ -161,21 +162,6 @@
 
 
         </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btnDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:backgroundTint="#BF0505"
-                android:onClick="onClickDelete"
-                android:text="Delete"
-                android:visibility="invisible" />
-
-        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

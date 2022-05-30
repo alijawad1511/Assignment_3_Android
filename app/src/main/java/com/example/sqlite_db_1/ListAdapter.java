@@ -1,6 +1,7 @@
 package com.example.sqlite_db_1;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +17,13 @@ public class ListAdapter extends BaseAdapter {
     LayoutInflater layoutInflater = null;
 
     // XML Objects
-    TextView id,name,studentClass,rollNumber,age;
+    TextView tvId,tvName,tvClass,tvRollNumber,tvAge;
 
     public ListAdapter(Context context,ArrayList<Student> students){
         this.students = students;
         this.context = context;
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        Log.d("DB_School","No. of Students : "+students.size());
     }
 
     @Override
@@ -43,17 +45,17 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View newView =layoutInflater.inflate(R.layout.listview_item,null);
 
-        id = newView.findViewById(R.id.id);
-        name = newView.findViewById(R.id.name);
-        studentClass = newView.findViewById(R.id.studentClass);
-        rollNumber = newView.findViewById(R.id.rollNumber);
-        age = newView.findViewById(R.id.age);
+        tvId = newView.findViewById(R.id.tvId);
+        tvName = newView.findViewById(R.id.tvName);
+        tvClass = newView.findViewById(R.id.tvClass);
+        tvRollNumber = newView.findViewById(R.id.tvRollNumber);
+        tvAge = newView.findViewById(R.id.tvAge);
 
-        id.setText(students.get(i).id);
-        name.setText(students.get(i).name);
-        studentClass.setText(students.get(i).studentClass);
-        rollNumber.setText(students.get(i).rollNumber);
-        age.setText(students.get(i).age);
+        tvId.setText(""+students.get(i).getId());
+        tvName.setText(students.get(i).getName());
+        tvClass.setText(students.get(i).getStudentClass());
+        tvRollNumber.setText(students.get(i).getRollNumber());
+        tvAge.setText(""+students.get(i).getAge());
 
 
         return newView;

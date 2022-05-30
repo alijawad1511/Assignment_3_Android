@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLite_DB_1">
         <activity
+            android:name=".SearchStudent"
+            android:exported="false" />
+        <activity
+            android:name=".AddStudent"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStudentsByAge"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStudentsByClass"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAllStudents"
+            android:exported="false" />
+        <activity
             android:name=".DeleteStudent"
             android:exported="false" />
         <activity

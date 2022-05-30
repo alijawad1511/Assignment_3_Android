@@ -2,9 +2,7 @@ package com.example.sqlite_db_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,43 +11,44 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DeleteStudent extends AppCompatActivity {
+public class SearchStudent extends AppCompatActivity {
 
-    TextView tvId,tvName,tvClass,tvAge,tvRollNumber;
     EditText etSearch;
-    Button btnSearch,btnDelete;
+    TextView tvId,tvName,tvClass,tvRollNumber,tvAge;
+    Button btnSearch,btnClear;
     ImageView ivProfile;
-
-    // Layout containing titles of Student Data
     LinearLayout layoutContainer;
     DBHelper db = new DBHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete_student);
+        setContentView(R.layout.activity_search_student);
         init();
     }
 
     public void init(){
         etSearch = findViewById(R.id.etSearch);
+
+        // Buttons
+        btnSearch = findViewById(R.id.btnSearch);
+        btnClear = findViewById(R.id.btnClear);
+
+        // TextViews
         tvId = findViewById(R.id.tvId);
         tvName = findViewById(R.id.tvName);
         tvClass = findViewById(R.id.tvClass);
         tvRollNumber = findViewById(R.id.tvRollNumber);
         tvAge = findViewById(R.id.tvAge);
-        btnSearch = findViewById(R.id.btnSearch);
-        btnDelete = findViewById(R.id.btnDelete);
+
         ivProfile = findViewById(R.id.ivProfile);
         layoutContainer = findViewById(R.id.layoutContainer);
     }
 
     public void onClickSearch(View view){
-        // Get ID from EditText in XML
         if(etSearch.getText().toString().isEmpty()){
             etSearch.setError("Kindly search an ID of student");
-        }
-        else{
+        }else{
             int id = Integer.parseInt(etSearch.getText().toString());
 
             // Search Student from DB
@@ -60,7 +59,6 @@ public class DeleteStudent extends AppCompatActivity {
             }else{
                 // Make Hide Elements Visible on Frontend
                 ivProfile.setVisibility(View.VISIBLE);
-                btnDelete.setVisibility(View.VISIBLE);
                 layoutContainer.setVisibility(View.VISIBLE);
 
                 // Show Searched Data on Frontend
@@ -70,21 +68,6 @@ public class DeleteStudent extends AppCompatActivity {
                 tvRollNumber.setText(student.getRollNumber());
                 tvAge.setText(""+student.getAge());
             }
-        }
-
-    }
-
-    public void onClickDelete(View view){
-        if(tvId.getText().toString().isEmpty()){
-            etSearch.setError("Kindly search an ID first");
-        }else{
-            int id = Integer.parseInt(etSearch.getText().toString());
-
-            db.deleteStudent(id);
-            Toast.makeText(this, "Student deleted successfully", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(DeleteStudent.this,MainActivity.class);
-            startActivity(intent);
-            finish();
         }
     }
 
@@ -97,7 +80,8 @@ public class DeleteStudent extends AppCompatActivity {
         tvAge.setText("");
 
         layoutContainer.setVisibility(View.INVISIBLE);
-        btnDelete.setVisibility(View.INVISIBLE);
         ivProfile.setVisibility(View.INVISIBLE);
     }
+
+
 }

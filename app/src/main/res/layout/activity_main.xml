@@ -29,10 +29,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="#E43030"
-        android:onClick="onClickAddStudent"
+        android:onClick="onClickAddNewStudent"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="Add New Student"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSearchStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickSearchStudent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Search a Student"
         android:textSize="18sp" />
 
     <Button
@@ -65,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="#E43030"
-        android:onClick="onClickSearchAll"
+        android:onClick="onClickViewAllStudents"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:text="View All Students"

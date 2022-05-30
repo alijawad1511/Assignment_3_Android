@@ -61,6 +61,38 @@ public class DBHelper extends SQLiteOpenHelper {
         return students;
     }
 
+    public Student searchStudentById(int id){
+        // Add a new Student in Database
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM students WHERE id="+id;
+        Cursor cursor  = db.rawQuery(query,null);
+        Student student = null;
+
+        if(cursor.getCount()>0){
+            cursor.moveToFirst();
+            int studentId,age;
+            String name,studentClass,rollNumber;
+
+            studentId = cursor.getInt(0);
+            name = cursor.getString(1);
+            studentClass = cursor.getString(2);
+            age = cursor.getInt(3);
+            rollNumber = cursor.getString(4);
+
+            student = new Student(studentId,name,studentClass,rollNumber,age);
+
+            Log.d("DB_School","ID: "+studentId+"\nName: "+name+"\nClass: "+studentClass+
+                    "\nAge: "+age+"\nRoll No.: "+rollNumber);
+
+        }else{
+            Toast.makeText(c, "Student not found", Toast.LENGTH_SHORT).show();
+        }
+
+        db.close();
+
+        return student;
+    }
+
     public void addStudent(Student student){
         // Add a new Student in Database
         SQLiteDatabase db = this.getWritableDatabase();

@@ -13,7 +13,7 @@ public class AddStudent extends AppCompatActivity {
 
     EditText etName,etClass,etAge, etRollNumber;
     Button btnAddStudent;
-    DBHelper dbHelper = null;
+    DBHelper dbHelper = new DBHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class AddStudent extends AppCompatActivity {
         etClass = findViewById(R.id.etClass);
         etAge = findViewById(R.id.etAge);
         etRollNumber = findViewById(R.id.etRollNumber);
-        dbHelper = new DBHelper(AddStudent.this);
     }
 
     public void onClickAddStudent(View view) {
