@@ -6,7 +6,7 @@
 - ListView
 - ListAdapter
 
-### @@( Creadits )@@
+### @@( Creadit )@@
 
 - Name: Syed Ali Jawad
 - ID: F2019266282
