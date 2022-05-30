@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#0099FF"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:text="Student Management System"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAddNewStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickAddStudent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Add New Student"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDeleteStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickDeleteStudent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Delete Student"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnUpdateStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickUpdateStudent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Update Student"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSearchAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickSearchAll"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="View All Students"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSearchByAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickSearchByAge"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Search by Age Limit"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSearchByClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E43030"
+        android:onClick="onClickSearchByClass"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Search by Class Limit"
+        android:textSize="18sp" />
+</LinearLayout>
